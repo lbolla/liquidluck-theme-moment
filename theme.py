@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 
-name = 'moment'
-version = '2.0'
-website = 'https://github.com/lepture/liquidluck-theme-moment'
+name = 'Momentum'
+version = '1.0'
+website = 'https://github.com/lbolla/liquidluck-theme-moment'
 author = {
-    'name': 'Hsiaoming Yang',
-    'website': 'http://lepture.com',
+    'name': 'Lorenzo Bolla',
+    'website': 'http://lbolla.info',
 }
-
 
 lang = 'en'
 
@@ -16,13 +15,12 @@ navigation = [
     {'title': 'About', 'link': '/about.html'},
 ]
 
-twitter = 'lepture'
-github = None
-disqus = None
-analytics = None
+twitter = None
+github = 'lbolla'
+disqus = "lorenzobolla"
+analytics = "UA-15875446-1"
 
 allow_comment_on_secret_post = False
-
 
 #: key-value descriptions
 descriptions = {}
