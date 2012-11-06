@@ -20,6 +20,7 @@
             by <span class="fn">{{post.author.name}}</span>
             {%- endif %}
         </span>
+        <span class="category">in <a href="/blog/{{post.category}}/">{{post.category}}</a></span>
     </div>
     <div class="entry-content"{%if post.review%} itemprop="description"{%endif%}>
         {{post.content}}

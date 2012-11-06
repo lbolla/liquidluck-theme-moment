@@ -347,3 +347,6 @@ hr.end {
     opacity: 0.2;
     filter:alpha(opacity=20);
 }
+#nav form {
+    display: inline;
+}
