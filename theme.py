@@ -19,6 +19,7 @@ twitter = None
 github = 'lbolla'
 disqus = "lorenzobolla"
 analytics = "UA-15875446-1"
+gravatar = "dfdab99de1e829865bb27a0939bf2cbb.png"
 
 allow_comment_on_secret_post = False
 

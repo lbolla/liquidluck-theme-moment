@@ -45,6 +45,9 @@
         </header>
 
         <div id="main">
+            {% if theme.gravatar -%}
+            <img id="gravatar" src="http://www.gravatar.com/avatar/{{ theme.gravatar }}" />
+            {%- endif %}
             <div class="container">
                 {%- block main %}
                 {% endblock -%}

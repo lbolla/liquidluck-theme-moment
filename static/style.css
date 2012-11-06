@@ -340,3 +340,10 @@ hr.end {
 #disqus_thread {
     margin-top: 50px;
 }
+#gravatar {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0.2;
+    filter:alpha(opacity=20);
+}
