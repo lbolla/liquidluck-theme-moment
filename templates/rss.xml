@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Lorenzo Bolla</title>
+        <description>Lorenzo Bolla RSS feed</description>
+        <link>http://lbolla.info/blog/</link>
+        <lastBuildDate>{{ resource|now }}</lastBuildDate>
+        <pubDate>{{ resource.posts[0].date.strftime('%a, %d %b %Y %H:%M:%S') }}</pubDate>
+        <ttl>1800</ttl>
+        {% for post in resource.posts[:20] %}
+        <item>
+            <title>{{ post.title }}</title>
+            <description>{{ post.summary }}</description>
+            <link>{{ post|permalink }}</link>
+            <guid>{{ post|permalink }}</guid>
+            <pubDate>{{ post.date.strftime('%a, %d %b %Y %H:%M:%S') }}</pubDate>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>
+

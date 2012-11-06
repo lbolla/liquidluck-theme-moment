@@ -9,3 +9,8 @@ def description(key):
     if key not in dct:
         return ''
     return dct[key]
+
+
+def now(what):
+    import datetime
+    return datetime.datetime.now().strftime('%a, %d %b %Y %H:%M:%S')
