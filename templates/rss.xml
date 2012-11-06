@@ -7,7 +7,7 @@
         <lastBuildDate>{{ resource|now }}</lastBuildDate>
         <pubDate>{{ resource.posts[0].date.strftime('%a, %d %b %Y %H:%M:%S') }}</pubDate>
         <ttl>1800</ttl>
-        {% for post in resource.posts[:20] %}
+        {% for post in resource.posts %}
         <item>
             <title>{{ post.title }}</title>
             <description>{{ post.summary }}</description>
@@ -18,4 +18,3 @@
         {% endfor %}
     </channel>
 </rss>
-
