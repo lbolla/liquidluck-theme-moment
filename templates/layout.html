@@ -48,9 +48,11 @@
                 {% for item in theme.navigation %}
                 <a href="{{item.link}}">{{item.name}}</a>
                 {%- endfor %}
+                {% if theme.search_q -%}
                 <form action="/search">
-                    <input type="text" name="q" placeholder="Search" />
+                    <input type="text" name="{{theme.search_q}}" placeholder="Search" />
                 </form>
+                {%- endif %}
             </nav>
             {%- endblock %}
             {%- endblock %}
