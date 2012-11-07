@@ -11,6 +11,7 @@ def description(key):
     return dct[key]
 
 
-def now(what):
-    import datetime
-    return datetime.datetime.now().strftime('%a, %d %b %Y %H:%M:%S')
+def tagcloud_size(tags):
+    w_min = min(len(items) for items in tags.itervalues())
+    w_max = max(len(items) for items in tags.itervalues())
+    return w_min, w_max

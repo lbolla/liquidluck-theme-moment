@@ -15,6 +15,17 @@
         <!--[if lt IE 9]>
         <script type="text/javascript" src="{{ static_url('html5shiv.js') }}"></script>
         <![endif]-->
+        {% if theme.search_q -%}
+        <script>
+            (function() {
+                var cx = '014344711777067465238:ipwcmphdr_g';
+                var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                    '//www.google.co.uk/cse/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+            })();
+        </script>
+        {%- endif %}
         {% if theme.analytics -%}
         <script type="text/javascript">
             var _gaq = _gaq || [];
@@ -28,15 +39,6 @@
             })();
         </script>
         {%- endif %}
-        <script>
-(function() {
-    var cx = '014344711777067465238:ipwcmphdr_g';
-    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.co.uk/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-})();
-        </script>
         {% block afterstyle %}{% endblock %}
     </head>
     <body>
