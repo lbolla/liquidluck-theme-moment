@@ -345,6 +345,7 @@ hr.end {
     right: 20px;
     bottom: 20px;
     opacity: 0.2;
+    z-index: -1;
     filter:alpha(opacity=20);
 }
 #nav form {
