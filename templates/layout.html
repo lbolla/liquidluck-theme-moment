@@ -15,6 +15,17 @@
         <!--[if lt IE 9]>
         <script type="text/javascript" src="{{ static_url('html5shiv.js') }}"></script>
         <![endif]-->
+        {% if theme.search_q -%}
+        <script>
+            (function() {
+                var cx = '014344711777067465238:ipwcmphdr_g';
+                var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                    '//www.google.co.uk/cse/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+            })();
+        </script>
+        {%- endif %}
         {% if theme.analytics -%}
         <script type="text/javascript">
             var _gaq = _gaq || [];
@@ -28,15 +39,6 @@
             })();
         </script>
         {%- endif %}
-        <script>
-(function() {
-    var cx = '014344711777067465238:ipwcmphdr_g';
-    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.co.uk/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-})();
-        </script>
         {% block afterstyle %}{% endblock %}
     </head>
     <body>
@@ -48,9 +50,11 @@
                 {% for item in theme.navigation %}
                 <a href="{{item.link}}">{{item.name}}</a>
                 {%- endfor %}
+                {% if theme.search_q -%}
                 <form action="/search">
-                    <input type="text" name="q" placeholder="Search" />
+                    <input type="text" name="{{theme.search_q}}" placeholder="Search" />
                 </form>
+                {%- endif %}
             </nav>
             {%- endblock %}
             {%- endblock %}
@@ -83,7 +87,7 @@
             <span class="theme">
                 Theme <a href="{{theme.website}}" rel="nofollow">{{theme.name}}</a> {{theme.version}} by <a href="{{theme.author.website}}">{{theme.author.name}}</a>,
             </span>
-            <span class="rss"><a href="/feed.xml">RSS</a></span>
+            <span class="rss"><a href="/{{site.prefix}}/feed.xml">RSS</a></span>
             </p>
             {%- endblock %}
         </footer>

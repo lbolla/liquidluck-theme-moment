@@ -20,6 +20,7 @@ github = None # 'lbolla'
 disqus = None # "lorenzobolla"
 analytics = None # "UA-15875446-1"
 gravatar = None # "dfdab99de1e829865bb27a0939bf2cbb.png"
+search_q = None # "q"
 
 allow_comment_on_secret_post = False
 

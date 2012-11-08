@@ -36,8 +36,18 @@
     }
     select.onchange = function() {
         location.href = select.value;
-    }
+    };
     nav.appendChild(select);
+
+    // Resize input boxes
+    var text_width = "6em";
+    if (d.body.clientWidth < 350) {
+        text_width = "3em";
+    }
+    var input_texts = nav.querySelectorAll('input[type="text"]');
+    for (var i = 0; i < input_texts.length; i++) {
+        input_texts[i].style.width = text_width;
+    }
 
     function createOption(name, link) {
         var option = d.createElement('option');
