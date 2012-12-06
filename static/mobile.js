@@ -19,42 +19,10 @@
   }
 }(document));
 
-// fix navigation for mobile
+// Activate nav links
 (function(d) {
-    if (!d.querySelectorAll || d.body.clientWidth > 560) {
-        return;
-    }
-    var nav = d.getElementById('nav');
-    var links = nav.querySelectorAll('a');
-    var select = d.createElement('select');
-    select.appendChild(createOption('nav', '#'));
-    for (var i = 0; i < links.length; i++) {
-        var link = links[i];
-        var option = createOption(link.innerHTML, link.href);
-        nav.removeChild(link);
-        select.appendChild(option);
-    }
+    var select = d.getElementById('nav-select');
     select.onchange = function() {
         location.href = select.value;
     };
-    nav.appendChild(select);
-
-    // Resize input boxes
-    var text_width = "6em";
-    if (d.body.clientWidth < 350) {
-        text_width = "3em";
-    }
-    var input_texts = nav.querySelectorAll('input[type="text"]');
-    for (var i = 0; i < input_texts.length; i++) {
-        input_texts[i].style.width = text_width;
-    }
-
-    function createOption(name, link) {
-        var option = d.createElement('option');
-        option.value = link; option.innerHTML = name;
-        if (location.href == link) {
-            option.selected = true;
-        }
-        return option;
-    }
 }(document));

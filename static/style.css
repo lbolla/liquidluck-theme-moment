@@ -218,15 +218,18 @@ hr.end {
     margin-top: 8px;
     font-size: 16px;
 }
-@media (max-width: 480px) {
+#nav-select { display: none; }
+#nav-links { display: inline; }
+@media (max-width: 930px) {
+    #nav { margin: 0 0 0 180px; }
+}
+@media (max-width: 620px) {
     #brand a {
         color: rgba(0,0,0,0.8);
     }
-    #nav {
-        position: absolute;
-        top: 0;
-        right: 10px;
-    }
+    #nav-select { display: inline; }
+    #nav-links { display: none; }
+    #nav select, #nav input { width: 30%; }
 }
 #main {
     clear: both;

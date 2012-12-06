@@ -43,21 +43,32 @@
     </head>
     <body>
         <header id="header">
-            {% block header -%}
+        {% block header -%}
             <h1 id="brand"><a href="/">{{site.name}}</a></h1>
             {%- block nav %}
             <nav id="nav" role="navigation">
+
+            <span id="nav-links">
                 {% for item in theme.navigation %}
                 <a href="{{item.link}}">{{item.name}}</a>
                 {%- endfor %}
-                {% if theme.search_q -%}
-                <form action="/search">
-                    <input type="text" name="{{theme.search_q}}" placeholder="Search" />
-                </form>
-                {%- endif %}
+            </span>
+
+            <select id="nav-select">
+                <option value="#">nav</option>
+                {% for item in theme.navigation %}
+                <option value="{{item.link}}">{{item.name}}</a></option>
+                {%- endfor %}
+            </select>
+
+            {% if theme.search_q -%}
+            <form id="nav-search" action="/search">
+                <input type="text" name="{{theme.search_q}}" placeholder="Search" />
+            </form>
+            {%- endif %}
             </nav>
             {%- endblock %}
-            {%- endblock %}
+        {%- endblock %}
         </header>
 
         <div id="main">
