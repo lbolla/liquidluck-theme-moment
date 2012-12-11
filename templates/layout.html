@@ -4,7 +4,9 @@
         <title>{% block title %}{{site.name}}{% endblock %}</title>
         <script>if (top !== self) top.location = self.location;</script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        {% if site.desc -%}
         <meta name="description" content="{{site.desc}}" />
+        {%- endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
         <link rel="stylesheet" type="text/css" href="{{static_url('style.css')}}" />
         <link rel="stylesheet" type="text/css" href="{{static_url('pygments.css')}}" />
