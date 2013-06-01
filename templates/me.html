@@ -11,7 +11,7 @@
 <div class="entry-list">
     {% for post in resource.posts[:6] %}
     <div class="entry-item">
-        <time class="updated" datetime="{{post.date|xmldatetime}}">{{post.date.strftime("%b, %d, %Y")}}</time>
+        <time class="updated" datetime="{{post.date|xmldatetime}}">{{post.date.strftime("%Y-%m-%d")}}</time>
         <a href="{{ post|permalink }}">{{post.title}}</a>
     </div>
     {% endfor %}
