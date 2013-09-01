@@ -1,26 +1,34 @@
-@import url(//fonts.googleapis.com/css?family=Rosario);
-@import url(//fonts.googleapis.com/css?family=PT+Sans);
+@import url(//fonts.googleapis.com/css?family=PT+Sans:700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+@media all {html {font-size: 16px;}}
+@media all and (max-width:1000px){html {font-size: 14px;}}
+@media all and (max-width:800px){html {font-size: 12px;}}
+
 body {
     color: #444;
     padding: 0;
     margin: 0;
-    font: 16px/1.62 "Rosario", "Xin Gothic", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 h1, h2, h3, h4, h5, strong {
-    font-family: "PT Sans", "Xin Gothic", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: "PT Sans", sans-serif;
+    font-weight: normal;
 }
 h1 {
     margin-top: 0;
-    font-size: 28px;
+    font-size: 2em;
 }
 h2 {
-    font-size: 22px;
     margin: 45px 0 15px;
+    font-size: 1.5em;
 }
 h3 {
-    font-size: 18px;
     margin: 30px 0 10px;
+    font-size: 1.17em;
 }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
 
 /* block level */
 blockquote {
@@ -98,7 +106,7 @@ strong {
 
 /* code */
 pre, code, tt {
-    font: 14px "Menlo", monospace;
+    font-family: "Menlo", monospace;
 }
 pre {
     margin: 1em 0;
@@ -131,7 +139,6 @@ pre code {
 textarea, input {
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 14px;
     padding: 5px 8px;
 }
 textarea:focus, input:focus {
@@ -181,7 +188,7 @@ hr.end {
     top: 0;
     left: 20px;
     margin: 0;
-    font-size: 26px;
+    font-size: 28px;
 }
 #brand a {
     color: #dddfdf;
@@ -202,8 +209,7 @@ hr.end {
     z-index: 9;
 }
 #nav a {
-    font-weight: bold;
-    font-family: "Helvetica Neue", "Helvetica", arial, sans-serif;
+    /* font-weight: bold; */
     margin-right: 6px;
     padding: 8px 10px;
     line-height: 46px;
@@ -221,7 +227,7 @@ hr.end {
 #nav-select { display: none; }
 #nav-links { display: inline; }
 @media (max-width: 930px) {
-    #nav { margin: 0 0 0 180px; }
+    #nav { margin: 0 0 0 200px; }
 }
 @media (max-width: 620px) {
     #brand a {
@@ -266,14 +272,13 @@ hr.end {
 /* article */
 .hentry {
     overflow: hidden;
-    font-family: 'Rosario', 'Xin Gothic', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', Arial, sans-serif;
 }
 .entry-title, .hentry h2, .hentry h3, .hentry h4 {
     color: #222;
 }
 .entry-meta, .entry-meta a, .updated, .updated a , .entry-review {
     color: #999;
-    font-size: 14px;
+    font-size: 0.9em;
 }
 .entry-meta a:hover, .updated a:hover {
     color: #d14;
@@ -302,11 +307,10 @@ hr.end {
 .entry-item a {
     margin: 0.2em 1em;
 }
-.entry-item .updated {
-    font-family: "PT Sans", sans-serif;
-}
 .entry-item-title {
     margin-top: 24px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.1em;
 }
 .entry-item-title a {
     margin-left: 0;
