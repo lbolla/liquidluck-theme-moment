@@ -1,5 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=PT+Sans:700);
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
+@import url(//fonts.googleapis.com/css?family=Inconsolata);
 
 @media all {html {font-size: 18px;}}
 @media all and (max-width:1200px){html {font-size: 16px;}}
@@ -106,8 +107,8 @@ strong {
 }
 
 /* code */
-pre, code, tt {
-    font-family: "Menlo", monospace;
+pre, code, tt, .gist .line {
+    font-family: "Inconsolata", monospace;
 }
 pre {
     margin: 1em 0;
@@ -121,10 +122,9 @@ pre {
     border-radius: 3px;
 }
 code, tt {
-    background-color: #fee9cc;
+    /* background-color: #fee9cc; */
     color: rgba(0, 0, 0, 0.75);
     padding: 1px 3px;
-    font-size: 12px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -227,7 +227,7 @@ hr.end {
 }
 #nav-select { display: none; }
 #nav-links { display: inline; }
-@media (max-width: 930px) {
+@media (max-width: 960px) {
     #nav { margin: 0 0 0 200px; }
 }
 @media (max-width: 620px) {
@@ -262,7 +262,7 @@ hr.end {
 #footer .copyright, #footer .system-info {
     margin: 0;
     color: #ccc;
-    font-size: 12px;
+    font-size: 0.8em;
 }
 #footer .copyright a {
     color: #bbb;
@@ -276,6 +276,7 @@ hr.end {
 }
 .entry-title, .hentry h2, .hentry h3, .hentry h4 {
     color: #222;
+    line-height: 1.2;
 }
 .entry-meta, .entry-meta a, .updated, .updated a , .entry-review {
     color: #999;
@@ -302,7 +303,7 @@ hr.end {
     padding-left: 0;
 }
 .entry-item {
-    margin: 12px 0;
+    margin: 0.8em 0;
     zoom: 1;
 }
 .entry-item a {
@@ -321,7 +322,7 @@ hr.end {
     margin-top: 40px;
     text-align: center;
     text-transform: uppercase;
-    font: normal 12px "Helvetica", arial, sans-serif;
+    font: normal 0.8em "Helvetica", arial, sans-serif;
     color: #9f9f99;
 }
 .pagination .prev {
@@ -343,7 +344,7 @@ hr.end {
     opacity: 1;
 }
 .tagcloud .count {
-    font-size: 12px;
+    font-size: 0.8em;
 }
 #disqus_thread {
     margin-top: 50px;
