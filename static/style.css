@@ -7,10 +7,16 @@
 @media all and (max-width:1000px){html {font-size: 14px;}}
 @media all and (max-width:800px){html {font-size: 12px;}}
 
+html {
+    height: 100%;
+}
+
 body {
     color: #444;
     padding: 0;
     margin: 0;
+    min-width: 300px;
+    min-height: 100%;
     font-family: "Open Sans", sans-serif;
 }
 h1, h2, h3, h4, h5, strong {
@@ -163,8 +169,8 @@ hr.end {
     color: #fff;
 }
 .container {
-    max-width: 560px;
-    *width: 560px;
+    max-width: 600px;
+    *width: 600px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -202,8 +208,8 @@ hr.end {
 }
 #nav {
     position: relative;
-    max-width: 560px;
-    *width: 560px;
+    max-width: 600px;
+    *width: 600px;
     height: 46px;
     margin: 0 auto;
     background: #f4f4f4;
@@ -227,7 +233,7 @@ hr.end {
 }
 #nav-select { display: none; }
 #nav-links { display: inline; }
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
     #nav { margin: 0 0 0 200px; }
 }
 @media (max-width: 620px) {
@@ -244,8 +250,8 @@ hr.end {
 #footer {
     text-align: center;
     padding: 20px;
-    max-width: 560px;
-    *width: 560px;
+    max-width: 600px;
+    *width: 600px;
     margin: 0 auto 30px;
     text-align: left;
 }
